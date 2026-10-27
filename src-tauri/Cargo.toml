@@ -1,0 +1,20 @@
+[package]
+name = "midi_mapper"
+version = "0.1.0"
+description = "Map MIDI controller buttons to recorded macOS keyboard shortcuts"
+authors = ["MIDI Mapper contributors"]
+edition = "2021"
+
+[lib]
+name = "midi_mapper_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+midir = "0.11"
+enigo = "0.6"
